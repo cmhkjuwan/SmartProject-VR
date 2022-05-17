@@ -1,0 +1,11 @@
+Model Information:
+* title:	Japanese Classroom
+* source:	https://sketchfab.com/3d-models/japanese-classroom-2930eb3931fd48778fb338252ae08599
+* author:	David Oliveros Torres (https://sketchfab.com/davioly)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Japanese Classroom" (https://sketchfab.com/3d-models/japanese-classroom-2930eb3931fd48778fb338252ae08599) by David Oliveros Torres (https://sketchfab.com/davioly) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
