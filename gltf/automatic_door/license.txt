@@ -1,0 +1,11 @@
+Model Information:
+* title:	Simple automatic door animation
+* source:	https://sketchfab.com/3d-models/simple-automatic-door-animation-8ac682dd08b14cd3a9af2e3bbb2606ef
+* author:	RiccardoC. (https://sketchfab.com/MaxterDragon1)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Simple automatic door animation" (https://sketchfab.com/3d-models/simple-automatic-door-animation-8ac682dd08b14cd3a9af2e3bbb2606ef) by RiccardoC. (https://sketchfab.com/MaxterDragon1) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

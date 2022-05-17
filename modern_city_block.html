@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene renderer="colorManagement: true;" cursor="rayOrigin: mouse">
+
+      <a-assets>
+        <a-asset-item id="modern_city_block" src="https://cmhkjuwan.github.io/SmartProject-VR/gltf/modern_city_block/modern_city_block.gltf"></a-asset-item>
+      </a-assets>
+      <a-assets>
+        <a-asset-item id="commercial_building" src="https://cmhkjuwan.github.io/SmartProject-VR/gltf/commercial_building/commercial_building.gltf"></a-asset-item>
+      </a-assets>
+      <a-assets>
+        <a-asset-item id="automatic_door" src="https://cmhkjuwan.github.io/SmartProject-VR/gltf/automatic_door/automatic_door.gltf"></a-asset-item>
+      </a-assets>
+
+      <a-entity gltf-model="#modern_city_block" position="30 -1 80" scale="0.01 0.01 0.01" rotation="0 180 0"></a-entity>
+      <a-entity gltf-model="#commercial_building" scale="0.011 0.011 0.011" position="-9 8 -30"></a-entity>
+      <a-entity gltf-model="#automatic_door" door-cursor position="-17 0.1 -27.45" rotation="8 90 0"></a-entity>
+    </a-scene>
+  </body>
+  <script type="text/javascript">
+    AFRAME.registerComponent('door-cursor', {
+      init: function () {
+        this.el.addEventListener('click', function (evt) {
+            console.log("hello!");
+            window.location.href="https://cmhkjuwan.github.io/SmartProject-VR/office.html";
+        });
+      }
+    });
+  </script>
+</html>
