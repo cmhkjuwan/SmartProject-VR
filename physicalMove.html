@@ -4,10 +4,10 @@
 <a-scene>
         
 <a-entity id="rig"
-          movement-controls kinematic-body>
+          movement-controls="fly: true" kinematic-body>
   <a-entity camera
             position="0 1.6 0"
-            look-controls="pointerLockEnabled: true"></a-entity>
+            look-controls></a-entity>
 </a-entity>
   
   <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
