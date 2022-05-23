@@ -19,11 +19,15 @@
       <a-assets>
         <img id="cmhk" src="https://cmhkjuwan.github.io/SmartProject-VR/image/CMHK.png">
       </a-assets>
+      <a-assets>
+        <a-asset-item id="teleporter" src="https://cmhkjuwan.github.io/SmartProject-VR/gltf/teleporter/teleporter.gltf"></a-asset-item>
+      </a-assets>
 
       <a-image src="#cmhk" scale="6 5 5" position="-19.55 4 -36.3" rotation="0 -90 0"></a-image>
       <a-entity gltf-model="#modern_city_block" position="30 -1 80" scale="0.01 0.01 0.01" rotation="0 180 0"></a-entity>
       <a-entity gltf-model="#commercial_building" scale="0.011 0.011 0.011" position="-9 8 -30"></a-entity>
       <a-entity gltf-model="#automatic_door" door-cursor position="-17 0.1 -27.45" rotation="8 90 0"></a-entity>
+      <a-entity gltf-model="#teleporter" game-cursor scale="0.1 0.1 0.1" position="-25 0.2 -36"></a-entity>
 
       <a-camera twoway-motion="speed: 35">
         <a-cursor></a-cursor>    
@@ -34,8 +38,15 @@
     AFRAME.registerComponent('door-cursor', {
       init: function () {
         this.el.addEventListener('click', function (evt) {
-            console.log("hello!");
             window.location.href="https://cmhkjuwan.github.io/SmartProject-VR/office.html";
+        });
+      }
+    });
+
+    AFRAME.registerComponent('game-cursor', {
+      init: function () {
+        this.el.addEventListener('click', function (evt) {
+            window.location.href="https://cmhkjuwan.github.io/SmartProject-VR/endlessRunnerGame.html";
         });
       }
     });
