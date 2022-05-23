@@ -31,8 +31,8 @@ function setupControls() {
     tick: function (time, timeDelta) {
       var rotation = this.el.object3D.rotation;
 
-      if      (rotation.y > 0.1)  movePlayerTo(0);
-      else if (rotation.y < -0.1) movePlayerTo(2);
+      if      (rotation.y > 0.1)  movePlayerTo(2);
+      else if (rotation.y < -0.1) movePlayerTo(0);
       else                        movePlayerTo(1);
     }
   })
