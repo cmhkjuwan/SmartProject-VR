@@ -1,29 +1,80 @@
-<!DOCTYPE html>
 <html>
+  <head>
+    <title>Modern City</title>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
     <script src="https://rawgit.com/Ctrl-Alt-Zen/aframe-mobile-controls/master/components/twoway-motion/twoway-motion.js"></script>
+  </head>
+  <body>
+    <a-scene renderer="colorManagement: true;" cursor="rayOrigin: mouse">
 
-    <body>
-        <a-scene renderer="colorManagement: true;">
-            <a-assets>
-                <a-asset-item id="community" src="https://cmhkjuwan.github.io/SmartProject-VR/gltf/community/community.gltf"></a-asset-item>
-            </a-assets>
-            <a-assets>
-                <a-asset-item id="classroom" src="https://cmhkjuwan.github.io/SmartProject-VR/gltf/classroom/classroom.gltf"></a-asset-item>
-            </a-assets>
-            <a-assets>
-                <a-asset-item id="construction" src="https://cmhkjuwan.github.io/SmartProject-VR/gltf/construction/construction.gltf"></a-asset-item>
-            </a-assets>
-        
-            <a-entity gltf-model="#classroom" position="-30 -2 -100" scale="0.4 0.4 0.4" rotation="0 180 0"></a-entity>
-            <a-entity gltf-model="#construction" position="-15 -2 5"></a-entity>
-            <a-entity gltf-model="#community" position="300 -2 60" scale="0.01 0.01 0.01" rotation="0 0 0"></a-entity>
-        
-                <a-camera twoway-motion="speed: 35">
-                    <a-cursor></a-cursor>    
-                </a-camera>
-        </a-scene>
-    </body>
+      <a-assets>
+        <a-asset-item id="modern_city_block" src="https://cmhkjuwan.github.io/SmartProject-VR/gltf/modern_city_block/modern_city_block.gltf"></a-asset-item>
+      </a-assets>
+      <a-assets>
+        <a-asset-item id="commercial_building" src="https://cmhkjuwan.github.io/SmartProject-VR/gltf/commercial_building/commercial_building.gltf"></a-asset-item>
+      </a-assets>
+      <a-assets>
+        <a-asset-item id="automatic_door" src="https://cmhkjuwan.github.io/SmartProject-VR/gltf/automatic_door/automatic_door.gltf"></a-asset-item>
+      </a-assets>
+      <a-assets>
+        <img id="cmhk" src="https://cmhkjuwan.github.io/SmartProject-VR/image/CMHK.png">
+      </a-assets>
+      <a-assets>
+        <a-asset-item id="teleporter" src="https://cmhkjuwan.github.io/SmartProject-VR/gltf/teleporter/teleporter.gltf"></a-asset-item>
+      </a-assets>
+
+      <a-image src="#cmhk" scale="6 5 5" position="-19.55 4 -36.3" rotation="0 -90 0"></a-image>
+      <a-entity gltf-model="#modern_city_block" position="30 -1 80" scale="0.01 0.01 0.01" rotation="0 180 0"></a-entity>
+      <a-entity gltf-model="#commercial_building" scale="0.011 0.011 0.011" position="-9 8 -30"></a-entity>
+      <a-entity gltf-model="#automatic_door" door-cursor id="company_door" position="-17 0.1 -27.45" rotation="8 90 0"></a-entity>
+      <a-entity gltf-model="#teleporter" game-cursor id="game_teleporter" scale="0.1 0.1 0.1" position="-25 0.2 -36"></a-entity>
+
+      <a-camera oculus-go-controls twoway-motion="speed: 35" >
+        <a-entity cursor="fuse: true; fuseTimeout: 1000"
+                position="0 0 -1"
+                geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                material="color: white; shader: flat"
+                scale="0.5 0.5 0.5"
+                raycaster="far: 50; interval: 1000; objects: .clickable; showLine: true">
+      </a-camera>
+    </a-scene>
+  </body>
+  <script type="text/javascript">
+
+    function redirectOffice() {
+      window.location.href="https://cmhkjuwan.github.io/SmartProject-VR/office.html";
+    }
+
+    function redirectGame() {
+      window.location.href="https://cmhkjuwan.github.io/SmartProject-VR/endlessRunnerGame.html";
+    }
+
+    AFRAME.registerComponent('door-cursor', {
+      init: function () {
+        this.el.addEventListener('click', function (evt) {
+          redirectOffice();
+        });
+      }
+    });
+
+    AFRAME.registerComponent('game-cursor', {
+      init: function () {
+        this.el.addEventListener('click', function (evt) {
+          redirectGame();
+        });
+      }
+    });
+
+    var companyDoor;
+    var teleporter;
+
+    window.onload = function() {
+      companyDoor = document.getElementById('company_door');
+      teleporter = document.getElementById('game_teleporter');
+      teleporter.classList.add('clickable');
+      companyDoor.classList.add('clickable');
+      companyDoor.addEventListener('click', redirectOffice);
+      teleporter.addEventListener('click', redirectGame);
+    }
+  </script>
 </html>
-    

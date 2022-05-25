@@ -17,23 +17,36 @@
         <a-asset-item id="female" src="https://cmhkjuwan.github.io/SmartProject-VR/gltf/female/female.gltf"></a-asset-item>
       </a-assets>
 
-      <a-plane position="3.51 1.45 -3.40" to-studio rotation="0 -90 0" width="1" height="2" material="opacity: 0.0; transparent: true"></a-plane>
-      <a-plane position="3.38 1.45 -5.71" to-meeting-room rotation="0 -90 0" width="1" height="2" material="opacity: 0.0; transparent: true"></a-plane>
+      <a-plane position="3.51 1.45 -3.40" id="studio-door" to-studio rotation="0 -90 0" width="1" height="2" material="opacity: 0.0; transparent: true"></a-plane>
+      <a-plane position="3.38 1.45 -5.71" id="meetingroom-door" to-meeting-room rotation="0 -90 0" width="1" height="2" material="opacity: 0.0; transparent: true"></a-plane>
       <a-entity gltf-model="#office" position="0 0.4 0" scale="1 1 1" rotation="0 -90 0"></a-entity>
       <a-entity gltf-model="#male" scale="0.008 0.008 0.008" position="0 0.4 -1"></a-entity>
       <a-entity gltf-model="#female" scale="0.008 0.008 0.008" position="-6 0.4 -3"></a-entity>
       <a-text value="Present by Escalier" color="#111" position="-3.6 1.9 -4.4" rotation="0 0 0"></a-text>
     
       <a-camera twoway-motion="speed: 35">
-        <a-cursor></a-cursor>    
+        <a-entity cursor="fuse: true; fuseTimeout: 1000"
+                position="0 0 -1"
+                geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                material="color: white; shader: flat"
+                scale="0.5 0.5 0.5"
+                raycaster="far: 50; interval: 1000; objects: .clickable; showLine: true">
       </a-camera>
     </a-scene>
   </body>
   <script type="text/javascript">
+    function redirectStudio() {
+      window.location.href="https://cmhkjuwan.github.io/SmartProject-VR/studio.html";
+    }
+
+    function redirectMeetingRoom() {
+      window.location.href="https://cmhkjuwan.github.io/SmartProject-VR/meeting_room.html";
+    }
+
     AFRAME.registerComponent('to-studio', {
       init: function () {
         this.el.addEventListener('click', function (evt) {
-            window.location.href="https://cmhkjuwan.github.io/SmartProject-VR/studio.html";
+            redirectStudio();
         });
       }
     });
@@ -41,9 +54,21 @@
     AFRAME.registerComponent('to-meeting-room', {
       init: function () {
         this.el.addEventListener('click', function (evt) {
-            window.location.href="https://cmhkjuwan.github.io/SmartProject-VR/meeting_room.html";
+            redirectMeetingRoom();
         });
       }
     });
+
+    var studioDoor;
+    var meetingRoomDoor;
+
+    window.onload = function() {
+      studioDoor = document.getElementById('studio-door');
+      meetingRoomDoor = document.getElementById('meetingroom-door');
+      studioDoor.classList.add('clickable');
+      meetingRoomDoor.classList.add('clickable');
+      studioDoor.addEventListener('click', redirectStudio);
+      meetingRoomDoor.addEventListener('click', redirectMeetingRoom);
+    }
   </script>
 </html>

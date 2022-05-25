@@ -67,33 +67,65 @@
       <a-entity gltf-model="#chair" position="-2.4 -1 0" rotation="0 180 0"></a-entity>
       <a-entity gltf-model="#chair" position="3.6 -1 0" rotation="0 180 0"></a-entity>
       <a-entity gltf-model="#tv" tv-open position="5.65 2 -0.7" rotation="0 -90 0"></a-entity>
-      <a-entity gltf-model="#door" door-cursor position="-4.95 1.1 3.3" rotation="0 -90 0"></a-entity>
+      <a-entity gltf-model="#door" id="office-door" door-cursor position="-4.95 1.1 3.3" rotation="0 -90 0"></a-entity>
       <a-entity gltf-model="#whiteboard" raycaster="far: 20; interval: 1000; objects: .clickable" position="3 -0.8 -4.58" rotation="0 0 0" scale="0.02 0.02 0.02"></a-entity>
     
       <a-camera twoway-motion="speed: 35">
-        <a-cursor></a-cursor>    
+        <a-entity cursor="fuse: true; fuseTimeout: 1000"
+                position="0 0 -1"
+                geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                material="color: white; shader: flat"
+                scale="0.5 0.5 0.5"
+                raycaster="far: 50; interval: 1000; objects: .clickable; showLine: true">
       </a-camera>
     </a-scene>
   </body>
   <script type="text/javascript">
+    function redirectOffice() {
+      window.location.href="https://cmhkjuwan.github.io/SmartProject-VR/office.html";
+    }
+
+    function tvControl() {
+      var screen = document.querySelector("#tv-screen");
+      if(screen.getAttribute("visible")) {
+        screen.setAttribute("visible", false);
+      } else {
+        screen.setAttribute("visible", true);
+      }
+    }
+
     AFRAME.registerComponent('door-cursor', {
       init: function () {
         this.el.addEventListener('click', function (evt) {
-          window.location.href="https://cmhkjuwan.github.io/SmartProject-VR/office.html";
+          redirectOffice();
         });
       }
     });
-    AFRAME.registerComponent('tv-open', {
-      init: function () {
-        this.el.addEventListener('click', function (evt) {
-          var screen = document.querySelector("#tv-screen");
-          if(screen.getAttribute("visible")) {
-            screen.setAttribute("visible", false);
-          } else {
-            screen.setAttribute("visible", true);
-          }
-        });
-      }
-    });
+
+    // AFRAME.registerComponent('tv-open', {
+    //   init: function () {
+    //     this.el.addEventListener('click', function (evt) {
+    //       var screen = document.querySelector("#tv-screen");
+    //       if(screen.getAttribute("visible")) {
+    //         screen.setAttribute("visible", false);
+    //       } else {
+    //         screen.setAttribute("visible", true);
+    //       }
+    //     });
+    //   }
+    // });
+
+    var tv;
+    var officeDoor;
+
+    window.onload = function() {
+      tv = document.getElementById("tv-screen");
+      officeDoor = document.getElementById("office-door");
+      tv.classList.add("clickable");
+      officeDoor.classList.add("clickable");
+      tv.addEventListener('click', tvControl);
+      officeDoor.addEventListener('click', redirectOffice);
+    }
+
   </script>
 </html>
