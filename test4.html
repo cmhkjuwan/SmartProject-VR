@@ -3,7 +3,7 @@
     <title>Modern City</title>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://rawgit.com/Ctrl-Alt-Zen/aframe-mobile-controls/master/components/twoway-motion/twoway-motion.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://gftruj.github.io/webzamples/aframe/controls/oculus-thumbstick-controls.js"></script>
   </head>
   <body>
     <a-scene renderer="colorManagement: true;" cursor="rayOrigin: mouse">
@@ -30,7 +30,7 @@
       <a-entity gltf-model="#automatic_door" door-cursor id="company_door" position="-17 0.1 -27.45" rotation="8 90 0"></a-entity>
       <a-entity gltf-model="#teleporter" game-cursor id="game_teleporter" scale="0.1 0.1 0.1" position="-25 0.2 -36"></a-entity>
 
-      <a-entity id="rig" movement-controls>
+      <a-entity id="rig">
         <a-camera oculus-go-controls="hand: right" twoway-motion="speed: 200">
             <a-entity cursor="fuse: true; fuseTimeout: 1000"
                     position="0 0 -1"
@@ -38,6 +38,8 @@
                     material="color: white; shader: flat"
                     scale="0.5 0.5 0.5"
                     raycaster="far: 50; interval: 1000; objects: .clickable; showLine: true">
+            <a-entity oculus-touch-controls="hand: left" ></a-entity>
+            <a-entity oculus-touch-controls="hand: right" oculus-thumbstick-controls></a-entity>
         </a-camera>
       </a-entity>
     </a-scene>
