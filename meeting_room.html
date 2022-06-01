@@ -124,6 +124,7 @@
     var officeDoor;
 
     window.onload = function() {
+      document.querySelector('a-scene').enterVR();
       tv = document.getElementById("tv-screen");
       officeDoor = document.getElementById("office-door");
       tv.classList.add("clickable");

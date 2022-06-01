@@ -46,6 +46,7 @@
     var officeDoor;
 
     window.onload = function() {
+      document.querySelector('a-scene').enterVR();
       officeDoor = document.getElementById('office-door');
       officeDoor.classList.add('clickable');
       officeDoor.addEventListener('click', redirectOffice);

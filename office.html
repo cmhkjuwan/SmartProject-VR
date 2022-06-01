@@ -68,6 +68,7 @@
     var meetingRoomDoor;
 
     window.onload = function() {
+      document.querySelector('a-scene').enterVR();
       studioDoor = document.getElementById('studio-door');
       meetingRoomDoor = document.getElementById('meetingroom-door');
       studioDoor.classList.add('clickable');
