@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <title>Cinema</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/Ctrl-Alt-Zen/aframe-mobile-controls/master/components/twoway-motion/twoway-motion.js"></script>
+    <script src="https://gftruj.github.io/webzamples/aframe/controls/oculus-thumbstick-controls.js"></script>
+    <body>
+        <a-scene renderer="colorManagement: true;">
+            <a-assets>
+                <a-asset-item id="cinema" src="/gltf/cinema/cinema.gltf"></a-asset-item>
+            </a-assets>
+            <a-assets>
+                <video id="joeylive" webkit-playsinline playsinline autoplay loop="true" src="/video/joey.mp4"></video>
+            </a-assets>
+        
+            <a-entity gltf-model="#cinema" position="0 0 10"></a-entity>
+            <a-video src="#joeylive" width="19.8" height="10.8" position="0 2 -17.52"></a-video>
+        
+            <a-entity id="rig">
+                <a-camera twoway-motion="speed: 35">
+                    <a-entity cursor="fuse: true; fuseTimeout: 1000"
+                      position="0 0 -1"
+                      geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                      material="color: white; shader: flat"
+                      scale="0.5 0.5 0.5"
+                      raycaster="far: 50; interval: 1000; objects: .clickable; showLine: true">
+                    <a-entity oculus-touch-controls="hand: left" ></a-entity>
+                    <a-entity oculus-touch-controls="hand: right" oculus-thumbstick-controls></a-entity>
+                </a-camera>
+            </a-entity>
+        </a-scene>
+    </body>
+    <script>
+      window.onload = function() {
+        document.querySelector('a-scene').enterVR();
+      }
+    </script>
+</html>
