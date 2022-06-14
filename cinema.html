@@ -9,12 +9,12 @@
             <a-assets>
                 <a-asset-item id="cinema" src="https://cmhkjuwan.github.io/SmartProject-VR/gltf/cinema/cinema.gltf"></a-asset-item>
             </a-assets>
-            <a-assets timeout="10000">
-                <video id="joeylive" webkit-playsinline playsinline crossorigin="anonymous" autoplay loop="true" src="https://media.githubusercontent.com/media/cmhkjuwan/SmartProject-VR/main/video/Joey.mp4"></video>
+            <a-assets>
+                <video id="joeylive" webkit-playsinline playsinline autoplay loop="true" crossorigin="anonymous" src="https://media.githubusercontent.com/media/cmhkjuwan/SmartProject-VR/main/video/Joey.mp4"></video>
             </a-assets>
         
             <a-entity gltf-model="#cinema" position="0 0 10"></a-entity>
-            <a-video src="#joeylive" width="19.8" height="10.8" position="0 2 -17.52"  timeout="10000"></a-video>
+            <a-video id="video-screen" src="#joeylive" width="19.8" height="10.8" position="0 2 -17.52"></a-video>
         
             <a-entity id="rig">
                 <a-camera twoway-motion="speed: 35">
@@ -31,9 +31,12 @@
         </a-scene>
     </body>
     <script>
+        window.addEventListener('click', function () {
+            var v = document.querySelector('#joeylive');
+            v.play();
+        });
       window.onload = function() {
         document.querySelector('a-scene').enterVR();
-        
       }
     </script>
 </html>
