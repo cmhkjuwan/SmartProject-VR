@@ -72,13 +72,13 @@
       if(is_mobile()) {}
       else {
         document.querySelector('a-scene').enterVR();
-        studioDoor = document.getElementById('studio-door');
-        meetingRoomDoor = document.getElementById('meetingroom-door');
-        studioDoor.classList.add('clickable');
-        meetingRoomDoor.classList.add('clickable');
-        studioDoor.addEventListener('click', redirectStudio);
-        meetingRoomDoor.addEventListener('click', redirectMeetingRoom);
       }
+      studioDoor = document.getElementById('studio-door');
+      meetingRoomDoor = document.getElementById('meetingroom-door');
+      studioDoor.classList.add('clickable');
+      meetingRoomDoor.classList.add('clickable');
+      studioDoor.addEventListener('click', redirectStudio);
+      meetingRoomDoor.addEventListener('click', redirectMeetingRoom);
     }
   </script>
 </html>

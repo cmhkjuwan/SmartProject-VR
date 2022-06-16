@@ -50,10 +50,10 @@
       if(is_mobile()) {}
       else {
         document.querySelector('a-scene').enterVR();
-        officeDoor = document.getElementById('office-door');
-        officeDoor.classList.add('clickable');
-        officeDoor.addEventListener('click', redirectOffice);
       }
+      officeDoor = document.getElementById('office-door');
+      officeDoor.classList.add('clickable');
+      officeDoor.addEventListener('click', redirectOffice);
     }
   </script>
 </html>

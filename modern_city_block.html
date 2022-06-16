@@ -78,13 +78,13 @@
       if(is_mobile()) {}
       else {
         document.querySelector('a-scene').enterVR();
-        companyDoor = document.getElementById('company_door');
-        // teleporter = document.getElementById('game_teleporter');
-        // teleporter.classList.add('clickable');
-        companyDoor.classList.add('clickable');
-        companyDoor.addEventListener('click', redirectOffice);
-        // teleporter.addEventListener('click', redirectGame);
       }
+      companyDoor = document.getElementById('company_door');
+      // teleporter = document.getElementById('game_teleporter');
+      // teleporter.classList.add('clickable');
+      companyDoor.classList.add('clickable');
+      companyDoor.addEventListener('click', redirectOffice);
+      // teleporter.addEventListener('click', redirectGame);
     }
   </script>
 </html>

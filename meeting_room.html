@@ -128,13 +128,13 @@
       if(is_mobile()) {}
       else {
         document.querySelector('a-scene').enterVR();
-        tv = document.getElementById("tv-screen");
-        officeDoor = document.getElementById("office-door");
-        tv.classList.add("clickable");
-        officeDoor.classList.add("clickable");
-        tv.addEventListener('click', tvControl);
-        officeDoor.addEventListener('click', redirectOffice);
       }
+      tv = document.getElementById("tv-screen");
+      officeDoor = document.getElementById("office-door");
+      tv.classList.add("clickable");
+      officeDoor.classList.add("clickable");
+      tv.addEventListener('click', tvControl);
+      officeDoor.addEventListener('click', redirectOffice);
     }
 
   </script>
