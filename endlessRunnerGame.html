@@ -7,6 +7,7 @@
     <script src="https://cdn.jsdelivr.net/gh/alvinwan/aframe-low-poly@0.0.2/dist/aframe-low-poly.min.js"></script>
     <script src="https://cmhkjuwan.github.io/SmartProject-VR/assets/ocean.js"></script>
     <script src="https://cmhkjuwan.github.io/SmartProject-VR/assets/ergo.js"></script>
+    <script src="https://cmhkjuwan.github.io/SmartProject-VR/js/userAgent.js"></script>
   </head>
   <body>
     <a-scene fog="type: linear; color: #a3d0ed; near:5; far:20">
@@ -150,7 +151,10 @@
   </body>
   <script>
     window.onload = function() {
-      document.querySelector('a-scene').enterVR();
+      if(is_mobile()) {}
+      else {
+        document.querySelector('a-scene').enterVR();
+      }
     }
   </script>
 </html>

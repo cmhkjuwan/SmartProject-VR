@@ -5,6 +5,7 @@
     <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
     <script src="https://rawgit.com/Ctrl-Alt-Zen/aframe-mobile-controls/master/components/twoway-motion/twoway-motion.js"></script>
     <script src="https://gftruj.github.io/webzamples/aframe/controls/oculus-thumbstick-controls.js"></script>
+    <script src="https://cmhkjuwan.github.io/SmartProject-VR/js/userAgent.js"></script>
   </head>
   <body>
     <a-scene renderer="colorManagement: true;" cursor="rayOrigin: mouse">
@@ -46,10 +47,13 @@
     var officeDoor;
 
     window.onload = function() {
-      document.querySelector('a-scene').enterVR();
-      officeDoor = document.getElementById('office-door');
-      officeDoor.classList.add('clickable');
-      officeDoor.addEventListener('click', redirectOffice);
+      if(is_mobile()) {}
+      else {
+        document.querySelector('a-scene').enterVR();
+        officeDoor = document.getElementById('office-door');
+        officeDoor.classList.add('clickable');
+        officeDoor.addEventListener('click', redirectOffice);
+      }
     }
   </script>
 </html>
