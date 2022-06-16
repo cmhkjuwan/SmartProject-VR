@@ -42,10 +42,14 @@
 
         var videoScreen;
         window.onload = function() {
-            document.querySelector('a-scene').enterVR();
-            videoScreen = document.getElementById('video-screen');
-            videoScreen.classList.add('clickable');
-            videoScreen.addEventListener('click', videoPlay);
+            if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+                // 当前设备是移动设备
+            } else {
+                document.querySelector('a-scene').enterVR();
+                videoScreen = document.getElementById('video-screen');
+                videoScreen.classList.add('clickable');
+                videoScreen.addEventListener('click', videoPlay);
+            }
         }
     </script>
 </html>
