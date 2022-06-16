@@ -31,12 +31,21 @@
         </a-scene>
     </body>
     <script>
-        window.addEventListener('click', function () {
+        function videoPlay() {
             var v = document.querySelector('#live');
             v.play();
+        }
+        
+        window.addEventListener('click', function () {
+            videoPlay();
         });
-      window.onload = function() {
-        document.querySelector('a-scene').enterVR();
-      }
+
+        var videoScreen;
+        window.onload = function() {
+            document.querySelector('a-scene').enterVR();
+            videoScreen = document.getElementById('video-screen');
+            videoScreen.classList.add('clickable');
+            videoScreen.addEventListener('click', videoPlay);
+        }
     </script>
 </html>
