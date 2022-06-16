@@ -41,6 +41,14 @@
             videoPlay();
         });
 
+        AFRAME.registerComponent('video-controll', {
+            init: function () {
+                this.el.addEventListener('click', function(evt) {
+                    videoPlay();
+                });
+            }
+        });
+
         var videoScreen;
         window.onload = function() {
             if (is_mobile()) {
