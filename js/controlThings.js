@@ -10,6 +10,7 @@ AFRAME.registerComponent('thing-control', {
             } else {
                 isControl = true;
             }
+            this.el.classList.add('hand-tracking-controller');
         });
     }
 });
