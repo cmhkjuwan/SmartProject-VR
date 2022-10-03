@@ -1,0 +1,11 @@
+Model Information:
+* title:	Balloon Letters and Numbers
+* source:	https://sketchfab.com/3d-models/balloon-letters-and-numbers-605cea736b7540869988b92a1ddee977
+* author:	Jeff Lange (https://sketchfab.com/jefftml)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Balloon Letters and Numbers" (https://sketchfab.com/3d-models/balloon-letters-and-numbers-605cea736b7540869988b92a1ddee977) by Jeff Lange (https://sketchfab.com/jefftml) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Party Hat v2
+* source:	https://sketchfab.com/3d-models/party-hat-v2-db1d4af0093341c39dce4d235c733d21
+* author:	Glitch5970 (https://sketchfab.com/Glitch5970)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Party Hat v2" (https://sketchfab.com/3d-models/party-hat-v2-db1d4af0093341c39dce4d235c733d21) by Glitch5970 (https://sketchfab.com/Glitch5970) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

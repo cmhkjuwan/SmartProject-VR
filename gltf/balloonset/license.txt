@@ -1,0 +1,11 @@
+Model Information:
+* title:	Party Balloons
+* source:	https://sketchfab.com/3d-models/party-balloons-af666416c9b0469a8db27a2eb613d78d
+* author:	nathaniel13 (https://sketchfab.com/nathaniel13)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Party Balloons" (https://sketchfab.com/3d-models/party-balloons-af666416c9b0469a8db27a2eb613d78d) by nathaniel13 (https://sketchfab.com/nathaniel13) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
