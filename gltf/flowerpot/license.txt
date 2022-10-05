@@ -1,0 +1,11 @@
+Model Information:
+* title:	Flowerpot
+* source:	https://sketchfab.com/3d-models/flowerpot-f85c796cdefc4b75b9d5892055650332
+* author:	Mr Gicu (https://sketchfab.com/MrGicu)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Flowerpot" (https://sketchfab.com/3d-models/flowerpot-f85c796cdefc4b75b9d5892055650332) by Mr Gicu (https://sketchfab.com/MrGicu) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
