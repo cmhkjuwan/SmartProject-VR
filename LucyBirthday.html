@@ -15,7 +15,7 @@
 
       async function wait5000() {
         console.log(`Waiting 5 seconds...`);
-        await sleep(8*1000);
+        await sleep(9*1000);
         console.log('waiting done');
       }
 
@@ -36,6 +36,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        flex-direction: column;
 
         top: 0;
         bottom: 0;
@@ -71,6 +73,7 @@
   <body>
     <div id="splash">
       <div class="loading"></div>
+      <p style="color:#fff";>正在前往Lucy生日會，請稍等...</p>
     </div>
 
     <a-scene physics="debug: false" style="display: none">
