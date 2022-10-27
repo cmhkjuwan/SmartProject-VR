@@ -16,7 +16,7 @@
 
       async function wait5000() {
         console.log(`Waiting 5 seconds...`);
-        await sleep(8*1000);
+        await sleep(3*1000);
         console.log('waiting done');
       }
 
@@ -212,6 +212,10 @@
             <a-asset-item id="window" src="https://cmhkjuwan.github.io/SmartProject-VR/gltf/window2/scene.gltf">
           </a-assets>
 
+          <a-assets>
+            <a-asset-item id="clock" src="https://cmhkjuwan.github.io/SmartProject-VR/gltf/clock/scene.gltf">
+          </a-assets>
+
           <!-- <a-sound src="https://media.githubusercontent.com/media/cmhkjuwan/SmartProject-VR/main/video/HappyBirthday.mp3" autoplay="true" position="0 2 0" crossorigin="anonymous" preload="auto"></a-sound> -->
           <!-- <a-plane width="2.5" height="1.5" position="2.8 1 -2.03" rotation="180 0 0" color="#FFFFFF"></a-plane> -->
           <!-- <a-entity gltf-model="#partyroom" position="-1.8 0 -6" scale="1 1 1" rotation="0 -90 0"></a-entity> -->
@@ -245,8 +249,15 @@
           <a-entity static-body gltf-model="#baloons" position="4 1.2 3.7" rotation="0 0 0" scale="0.3 0.3 0.3"></a-entity>
           <a-entity gltf-model="#lucy" position="4 2.08 3.7" scale="0.007 0.007 0.007" rotation="0 -90 0"></a-entity>
           <a-entity gltf-model="#lucy" position="0.3 1.26 6.5" scale="0.007 0.007 0.007" rotation="0 180 25"></a-entity>
+          <a-entity gltf-model="#lucy" position="0.3 0.1 4.3" scale="0.007 0.007 0.007" rotation="0 0 0"></a-entity>
+          <a-entity gltf-model="#lucy" position="-0.6 0.2 -1.7" scale="0.003 0.003 0.003" rotation="0 0 0"></a-entity>
+          <a-entity gltf-model="#lucy" position="-0.6 1.3 -1.65" scale="0.006 0.006 0.006" rotation="0 0 0"></a-entity>
+          <a-entity gltf-model="#lucy" position="0.3 3.75 -1.2" scale="0.007 0.007 0.007" rotation="0 0 0"></a-entity>
+          <a-entity gltf-model="#lucy" position="0.7 1.185 -4.5" scale="0.003 0.003 0.003" rotation="0 0 0"></a-entity>
+          <a-entity gltf-model="#lucy" position="-2.5 1.3 -5" scale="0.007 0.007 0.007" rotation="0 90 0"></a-entity>
           <a-entity static-body gltf-model="#balloonset" position="-1.7 0.3 6.5" rotation="0 0 0" scale="0.2 0.2 0.2"></a-entity>
           <a-entity static-body gltf-model="#balloonset" position="1.7 0.3 6.5" rotation="0 180 0" scale="0.2 0.2 0.2"></a-entity>
+          <a-entity static-body gltf-model="#clock" position="0.5 3.5 6.5" rotation="0 180 0" scale="0.3 0.3 0.3"></a-entity>
           <a-entity static-body gltf-model="#presents" position="4.05 0 -5.1" rotation="0 180 0" scale="0.0018 0.0018 0.0018"></a-entity>
           <a-entity gltf-model="#lucy" position="3.9 0.6 -5.6" scale="0.007 0.007 0.007" rotation="0 -90 0"></a-entity>
           <a-plane static-body src="#floorpic" position="0.5 0.1 0" rotation="-90 0 0" width="9" height="16"></a-plane>
