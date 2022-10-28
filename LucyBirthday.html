@@ -8,7 +8,7 @@
     <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
     <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
     <script src="https://cmhkjuwan.github.io/SmartProject-VR/js/kinemabody.js"></script>
-    <script src=""></script>
+    <script src="/js/userAgent.js"></script>
     <script>
       function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
@@ -23,11 +23,15 @@
       document.addEventListener('DOMContentLoaded', async function() {
           var scene = document.querySelector('a-scene');
           var splash = document.querySelector('#splash');
-          scene.addEventListener('loaded', async function (e) {
-            await wait5000();
-            splash.style.display = 'none';
-            scene.style.display = 'initial';
-          });
+          if(is_mobile()) {
+            window.alert("為有更好的體驗感，請使用電腦打開~");
+          } else {
+            scene.addEventListener('loaded', async function (e) {
+              await wait5000();
+              splash.style.display = 'none';
+              scene.style.display = 'initial';
+            });
+          }
       });
     </script>
     <style>
