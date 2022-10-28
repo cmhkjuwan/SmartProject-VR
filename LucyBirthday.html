@@ -25,6 +25,8 @@
           var splash = document.querySelector('#splash');
           if(is_mobile()) {
             window.alert("為有更好的體驗感，請使用電腦打開~");
+            var pObjs = document.getElementById("splash").getElementsByTagName("p");
+            pObjs[0].innerText="請重新使用電腦打開~";
           } else {
             scene.addEventListener('loaded', async function (e) {
               await wait5000();
